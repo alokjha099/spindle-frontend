@@ -48,9 +48,9 @@ const Login = () => {
 
   return (
     <div className="flex justify-center my-10">
-      <div className="card bg-base-300 w-96 shadow-xl">
+      <div className="card bg-gradient-to-br from-[#FF4DA6] to-[#6A0DAD] w-96 shadow-xl">
         <div className="card-body">
-          <h2 className="card-title justify-center">
+          <h2 className="card-title justify-center text-white">
             {isLoginForm ? "Login" : "Sign Up"}
           </h2>
           <div>
@@ -58,23 +58,23 @@ const Login = () => {
               <>
                 <label className="form-control w-full max-w-xs my-2">
                   <div className="label">
-                    <span className="label-text">First Name</span>
+                    <span className="label-text text-white">First Name</span>
                   </div>
                   <input
                     type="text"
                     value={firstName}
-                    className="input input-bordered w-full max-w-xs"
+                    className="input input-bordered w-full max-w-xs border-[#FF4DA6] text-[#6A0DAD]"
                     onChange={(e) => setFirstName(e.target.value)}
                   />
                 </label>
                 <label className="form-control w-full max-w-xs my-2">
                   <div className="label">
-                    <span className="label-text">Last Name</span>
+                    <span className="label-text text-white">Last Name</span>
                   </div>
                   <input
                     type="text"
                     value={lastName}
-                    className="input input-bordered w-full max-w-xs"
+                    className="input input-bordered w-full max-w-xs border-[#FF4DA6] text-[#6A0DAD]"
                     onChange={(e) => setLastName(e.target.value)}
                   />
                 </label>
@@ -82,23 +82,23 @@ const Login = () => {
             )}
             <label className="form-control w-full max-w-xs my-2">
               <div className="label">
-                <span className="label-text">Email ID:</span>
+                <span className="label-text text-white">Email ID:</span>
               </div>
               <input
                 type="text"
                 value={emailId}
-                className="input input-bordered w-full max-w-xs"
+                className="input input-bordered w-full max-w-xs border-[#FF4DA6] text-[#6A0DAD]"
                 onChange={(e) => setEmailId(e.target.value)}
               />
             </label>
             <label className="form-control w-full max-w-xs my-2">
               <div className="label">
-                <span className="label-text">Password</span>
+                <span className="label-text text-white">Password</span>
               </div>
               <input
                 type="password"
                 value={password}
-                className="input input-bordered w-full max-w-xs"
+                className="input input-bordered w-full max-w-xs border-[#FF4DA6] text-[#6A0DAD]"
                 onChange={(e) => setPassword(e.target.value)}
               />
             </label>
@@ -106,7 +106,7 @@ const Login = () => {
           <p className="text-red-500">{error}</p>
           <div className="card-actions justify-center m-2">
             <button
-              className="btn btn-primary"
+              className="btn bg-[#FF4DA6] hover:bg-[#6A0DAD] text-white border-none"
               onClick={isLoginForm ? handleLogin : handleSignUp}
             >
               {isLoginForm ? "Login" : "Sign Up"}
@@ -114,7 +114,7 @@ const Login = () => {
           </div>
 
           <p
-            className="m-auto cursor-pointer py-2"
+            className="m-auto cursor-pointer py-2 text-white hover:text-[#FF4DA6]"
             onClick={() => setIsLoginForm((value) => !value)}
           >
             {isLoginForm
