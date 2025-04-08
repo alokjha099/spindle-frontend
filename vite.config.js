@@ -2,7 +2,10 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
   server: {
-    host: '0.0.0.0', // Make the server accessible externally
-    port: 4173,       // Set the port to match the default Vite preview port
+    host: '0.0.0.0',  // Bind to all network interfaces
+    port: 4173,        // Ensure the port matches the one used in Render
   },
+  preview: {
+    allowedHosts: ['spindle-frontend.onrender.com'],  // Allow Render's public URL
+  }
 });
